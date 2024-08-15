@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Marvel Cinematic Universe</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <header>
+        <h1>About Marvel Cinematic Universe</h1>
+    </header>
+
+    <nav><%- include('partials/header') %> </nav>
+
+    <section class="container">
+        <h2 class="h2">About</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">The Marvel Cinematic Universe (MCU) is a media franchise and shared universe centered on a series of superhero films, independently produced by Marvel Studios and based on characters that appear in American comic books published by Marvel Comics.</p>
+            </div>
+            <div class="col-md-6">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"I am Iron Man."</p>
+                    <footer class="blockquote-footer">Tony Stark</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="container">
+        <h2 class="h2">Creators</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Stan Lee</strong> - Co-creator of many iconic Marvel characters</li>
+            <li class="list-group-item"><strong>Jack Kirby</strong> - Co-creator of many iconic Marvel characters</li>
+            <li class="list-group-item"><strong>Joe Simon</strong> - Co-creator of Captain America</li>
+            <li class="list-group-item"><strong>Steve Ditko</strong> - Co-creator of Spider-Man and Doctor Strange</li>
+        </ul>
+    </section>
+    
+    <section class="container">
+        <h2 class="h2">Studio</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">Marvel Studios is an American film and television studio known for producing the Marvel Cinematic Universe (MCU) films, based on characters that appear in American comic books published by Marvel Comics.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/Images/Marvel_Logo.svg.png" class="img-fluid logo-img" alt="Marvel Studios Logo">
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Marvel Studios. All rights reserved.</p>
+    </footer>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/scripts.js"></script>
+</body>
+</html>

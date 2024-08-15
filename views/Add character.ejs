@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe - Manage Characters</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add your character to the Avengers</h1>
+    </header>
+
+    <nav><%- include('partials/header') %> </nav>
+
+    <section>
+        <!-- Form for adding/updating a character -->
+        <form id="characterForm" method="POST">
+            <!-- Hidden input for update -->
+            <input type="hidden" id="charId"/>
+
+            <div class="inputBox">
+                <label>Name</label>
+                <input type="text" id="name" placeholder="Character name..." required/>
+            </div>
+
+            <div class="inputBox">
+                <label>E-mail</label><br>
+                <input type="email" id="emailid" placeholder="Character email..." required/>
+            </div>
+
+            <div class="inputBox">
+                <label>Message</label>
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="inputBox">
+                <label>Character Image</label>
+                <input type="file" id="imageFile" accept="image/*"/>
+                <div id="existingImageLink"></div>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <!-- Search form -->
+        <div class="SearchBox">
+            <input type="text" id="searchInput" placeholder="Search by name, email, or message..." onkeyup="searchCharacters()"/>
+        </div>
+
+        <!-- Table to display characters -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="characterTableBody">
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="/JS/dbscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Marvel Cinematic Universe</h1>
+    </header>
+   <nav><%- include('partials/header') %> </nav>
+    <section>
+        <h2 class="h2">Latest News</h2>
+        <p class="text-muted">Stay tuned for updates on upcoming movies and series!</p>
+        <img class="logo-img" src="/Images/Marvel_Logo.svg.png" alt="Marvel Logo">
+        <a class="btn btn-primary" href="https://www.marvel.com/">Visit Marvel Official Website</a><br>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/vmT3dk8099w"></iframe>
+        <audio controls>
+            <source src="/Images/marvel_intro_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Phase</th>
+                    <th>Movies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Iron Man, The Incredible Hulk, Iron Man 2, Thor, Captain America: The First Avenger, The Avengers</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Iron Man 3, Thor: the Dark World, Captain America: The Winter Soldier, Guardians of the Galaxy, Avengers: Age of Ultron</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Captain America: Civil War, Doctor Strange, Guardians of the Galaxy Vol. 2, Spider-Man: Homecoming, Thor: Ragnarok, Avengers: Infinity War, Avengers: Endgame</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+    <script src="/JS/scripts.js"></script>
+    <script src="/JS/script.js"></script>
+</body>
+</html>

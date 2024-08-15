@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Marvel Cinematic Universe</h1>
+    </header>
+
+    <nav><%- include('partials/header') %> </nav>
+
+    <section>
+        <h1>Form Submission Result</h1>
+    <p>Name: <%= name %></p>
+    <p>Message: <%= message %></p>
+</body>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Marvel Studios. All rights reserved.</p>
+    </footer>
+
+    <script src="/JS/scripts.js"></script>
+    <script src="/JS/script.js"></script>
+</body>
+<script>
+    document.getElementById('name').textContent = '<%= name %>';
+    document.getElementById('message').textContent = '<%= message %>';
+</script>
+</html>
